@@ -1,0 +1,5 @@
+jieba
+gensim
+# modelscope
+# addict
+# datasets
