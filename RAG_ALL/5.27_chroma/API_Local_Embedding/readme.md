@@ -3,4 +3,3 @@
 2. 调用API接口，实现Embedding
 3. 调用本地模型，实现Embedding
 
-先完成，再优化。
