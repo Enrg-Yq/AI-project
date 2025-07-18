@@ -31,5 +31,5 @@ if __name__ == "__main__":
     for item in result:
         if  full_text == (item.text):
             full_text += item.text
-    with open('result.txt', 'w', encoding='utf-8') as file:
+    with open('result.html', 'w', encoding='utf-8') as file:
         file.write(full_text)
