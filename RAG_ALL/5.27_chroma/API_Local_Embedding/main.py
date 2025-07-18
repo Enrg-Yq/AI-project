@@ -1,8 +1,8 @@
 import json
 from zhipuai import ZhipuAI
 import os
-from modelscope import AutoTokenizer, AutoModel
-import torch
+# from modelscope import AutoTokenizer, AutoModel
+# import torch
 from dotenv import load_dotenv
 
 def parse_json(file_path):
@@ -44,7 +44,7 @@ def local_embedding(sentences):
 if __name__ == '__main__':
     load_dotenv()
     processed_data = parse_json('data_source.json')
-    # print(processed_data[0]) 
+    
     client = ZhipuAI(api_key=os.environ["ZHIPUAI_API_KEY"])      
     
     Embeddings = []
@@ -53,17 +53,17 @@ if __name__ == '__main__':
         input_txt = item['key']
         
         # API调用
-        # Embedding = api_embedding(input_txt,client,"embedding-3")
-        # Embeddings.append(Embedding)
+        Embedding = api_embedding(input_txt,client,"embedding-3")
+        Embeddings.append(Embedding)
         
         # 本地调用
-        keywords.append(input_txt)
-    Embeddings = local_embedding(keywords)
+    #     keywords.append(input_txt)
+    #   Embeddings = local_embedding(keywords)
 
 
 
 
-    print(Embeddings)
-    # print(len(Embeddings))
+    # print(Embeddings)
+    print(len(Embeddings))
 
 

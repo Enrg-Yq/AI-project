@@ -37,7 +37,7 @@ if __name__ == '__main__':
         Embedding = api_embedding(input_txt,client,"embedding-3")
         Embeddings.append(Embedding)
         # print(len(Embedding))
-    print(Embeddings)
-    # print(len(Embeddings))
+    # print(Embeddings)
+    print(len(Embeddings))
 
 
